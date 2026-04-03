@@ -1,0 +1,6 @@
+pandas
+requests
+cloudscraper
+langchain
+langchain-google-genai
+python-dotenv
