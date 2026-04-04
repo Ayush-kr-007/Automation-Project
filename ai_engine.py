@@ -5,7 +5,6 @@ import time
 
 
 # RETRY HANDLER
-
 def safe_generate(prompt, retries=3):
     for attempt in range(retries):
         try:
@@ -25,7 +24,6 @@ def safe_generate(prompt, retries=3):
 
 
 # SAFE JSON PARSER
-
 def parse_json_safely(raw):
     if not raw:
         return {}
@@ -58,7 +56,6 @@ def parse_json_safely(raw):
 
 
 # ENRICHMENT PROMPT
-
 def build_enrich_prompt(name, idea):
     return f"""
 Analyze this startup deeply:
@@ -109,7 +106,6 @@ def enrich_lead(lead):
 
 
 # EMAIL PROMPT
-
 def build_email_prompt(name, idea, pain_point, automation_idea):
     return f"""
 You are writing a sharp, founder-level cold email.
@@ -153,7 +149,6 @@ Return ONLY valid JSON:
 
 
 # QUALITY FILTERS
-
 def is_generic(text):
     generic_phrases = [
         "platform",
@@ -197,7 +192,6 @@ def lacks_specificity(text):
 
 
 # EMAIL GENERATION
-
 def generate_email(lead):
     try:
         prompt = build_email_prompt(
@@ -243,7 +237,6 @@ Happy to share ideas if useful.
 
 
 # MAIN PIPELINE
-
 def analyze_and_generate(lead):
     enriched = enrich_lead(lead)
     lead.update(enriched)
