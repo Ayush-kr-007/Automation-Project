@@ -17,6 +17,19 @@ No paid APIs. No rate limits. No data sent to third parties.
 
 ---
 
+## 🧠 Why This Exists
+
+Most outreach tools:
+- rely on expensive APIs
+- generate generic templates
+- don’t actually understand the business
+
+LeadForge AI is different:
+- runs fully locally (zero cost)
+- analyzes each startup before generating emails
+- focuses on signal, not spam
+
+---
 ## 🏗️ Architecture
 
 | Component  | Purpose |
@@ -78,25 +91,16 @@ http://localhost:8501
 
 **STARTUP:** Advaita Cybernetics Private Limited  
 
-### 🎯 Pain Point
-The primary operational bottleneck could be the complexity of developing their flagship product, TrinetraAI.  
-Modeling billions of neurons with advanced mechanisms like STDP, hippocampal memory, and reasoning systems is extremely resource-intensive, leading to scalability and deployment delays.
+<img width="1916" height="705" alt="image" src="https://github.com/user-attachments/assets/56f64ffc-4641-4ce0-8411-1ecb50b1eb49" />
 
-### 💡 Automation Idea
-Implement an **AutoML system** to automate:
-- Model selection  
-- Hyperparameter tuning  
-- Architecture optimization  
-
-This reduces development time and improves scalability.
 
 ### 📧 Personalized Email
 
-    Hi Advaita Cybernetics Team,
+    Hi ADVAITA CYBERNETICS PRIVATE LIMITED Team,
 
-    Considering the complexity of modeling large-scale neural architectures in TrinetraAI, manual optimization can become time-consuming and resource-intensive, potentially slowing deployment.
-
-    One way to accelerate this is by introducing an AutoML layer to handle model selection and tuning. This could significantly reduce iteration time and improve scalability.
+    Considering the intricate modeling of 86 billion neurons with spike-timing-dependent plasticity (STDP) in TrinetraAI, manual optimization is a time-consuming and resource-intensive process. This could lead to delays in product deployment and scalability issues.
+    
+    To alleviate this operational bottleneck, we suggest implementing an automated machine learning (AutoML) system for optimizing the STDP modeling within your SNN architecture. AutoML can automate model selection, hyperparameter tuning, and neural network architecture design, significantly reducing time and resources required, thereby expediting development and improving scalability.
 
     Best,  
     Ayush
