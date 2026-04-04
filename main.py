@@ -24,7 +24,7 @@ def fetch_profiles(page=0, size=9):
     except:
         return None
 
-def get_all_ids(max_pages=5):
+def get_all_ids(max_pages=3):  
     ids = []
     for page in range(max_pages):
         data = fetch_profiles(page)

@@ -1,6 +1,5 @@
-pandas
-requests
-cloudscraper
-langchain
-langchain-google-genai
-python-dotenv
+ollama>=0.1.0
+streamlit>=1.30.0
+pandas>=1.5.0
+cloudscraper>=1.2.71
+requests>=2.31.0
