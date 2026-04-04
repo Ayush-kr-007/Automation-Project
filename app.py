@@ -8,9 +8,8 @@ st.set_page_config(page_title="AI Outreach Tool", layout="wide")
 
 st.title("🚀 AI Startup Outreach Tool")
 
-# -------------------------------
+
 # STATE
-# -------------------------------
 if "df" not in st.session_state:
     st.session_state["df"] = None
 
@@ -25,16 +24,15 @@ def save_result(lead):
         df.to_csv(OUTPUT_FILE, mode="a", header=False, index=False)
     else:
         df.to_csv(OUTPUT_FILE, index=False)
-# -------------------------------
+
 # SIDEBAR
-# -------------------------------
 st.sidebar.header("Search")
 num_pages = st.sidebar.slider("Pages to scan", 1, 10, 3)
 run_button = st.sidebar.button("Find Startups")
 
-# -------------------------------
+
 # FETCH
-# -------------------------------
+
 
 if run_button:
     with st.spinner("Fetching startups..."):
@@ -51,9 +49,8 @@ if run_button:
 
 df = st.session_state["df"]
 
-# -------------------------------
+
 # FILTER
-# -------------------------------
 if df is not None and not df.empty:
 
     industries = sorted(df["industry"].dropna().unique()) if "industry" in df.columns else []
@@ -72,9 +69,9 @@ if df is not None and not df.empty:
     # 🔥 LIMIT (save quota)
     df = df.head(5)
 
-    # -------------------------------
+    
     # DISPLAY
-    # -------------------------------
+    
     for i, row in df.iterrows():
         st.divider()
         col1, col2 = st.columns([2, 3])
@@ -103,9 +100,8 @@ if df is not None and not df.empty:
 
                     st.session_state[f"res_{i}"] = full_data
 
-            # -------------------------------
+            
             # SHOW RESULT
-            # -------------------------------
             if f"res_{i}" in st.session_state:
                 res = st.session_state[f"res_{i}"]
 
